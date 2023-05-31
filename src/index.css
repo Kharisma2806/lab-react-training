@@ -11,3 +11,95 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.box-colors-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.box-colors-container > * {
+  margin-bottom: 10px;
+}
+
+.credit-cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.credit-card {
+  height: 200px;
+  width: 350px;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.credit-card-type {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.credit-card-number {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: -10px;
+}
+
+.credit-card-expiration {
+  line-height: 7px;
+  margin-left: 0px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.credit-card-bank {
+  line-height: 7px;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.credit-card-info {
+  line-height: 7px;
+  margin: 10px 0px 0px 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.credit-card-owner {
+  height: 30px;
+  width: 120px;
+  margin-left: 20px;
+}
+
+.driverCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #455eb5;
+  border-radius: 10px;
+  margin: 10px;
+  color: white;
+  width: 750px;
+}
+
+.driverCardImg {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.driverCardData {
+  text-align: left;
+  line-height: 15px;
+  margin: 10px;
+}
