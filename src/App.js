@@ -7,6 +7,16 @@ import BoxColor from './components/BoxColor';
 import CreditCard from './components/CreditCard';
 import Rating from './components/Rating';
 import DriverCard from './components/DriverCard';
+import LikeButton from './components/LikeButton';
+import { useState } from 'react';
+import ClickablePicture from './components/ClickablePicture';
+import Dice from './components/Dice';
+import Carousel from './components/Carousel';
+import NumbersTable from './components/NumbersTable';
+import profiles from './data/berlin.json';
+import FaceBook from './components/FaceBook';
+import SignupPage from './components/SignupPage';
+import RgbColorPicker from './components/RgbColorPicker';
 
 const idArray = [
   {lastName: 'Doe',
@@ -27,8 +37,12 @@ const idArray = [
 ];
 
 function App() {
+  const [likes1, setLikes1] = useState(0);
+  const [likes2, setLikes2] = useState(0);
+
   return (
     <div className="App">
+
       <h1>IdCard</h1>
       {idArray.map((idCard) => {
         return <IdCard idCard={idCard} />;
@@ -116,9 +130,38 @@ function App() {
   }}
 />
 
+<div className="like-button">
+<LikeButton likes={likes1} setLikes={setLikes1} />
+      <LikeButton likes={likes2} setLikes={setLikes2} />
+      </div>
+
+<div className="maxence-pic">
+<ClickablePicture
+  img="maxence.png"
+  imgClicked="maxence-glasses.png"
+/>
+</div>
+<br />
+ <Dice />
+<br />
+<br />
+<div>
+ <Carousel
+  images={[
+    'https://randomuser.me/api/portraits/women/1.jpg',
+    'https://randomuser.me/api/portraits/men/1.jpg',
+    'https://randomuser.me/api/portraits/women/2.jpg',
+    'https://randomuser.me/api/portraits/men/2.jpg'
+  ]}
+/>
+</div>
+<NumbersTable limit={12} />
+<br />
+ <FaceBook profiles={profiles} />
+ <SignupPage />
+     <RgbColorPicker />
     </div>
   );
 }
-
 
 export default App;
